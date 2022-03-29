@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Guess the film</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <img class="mainImg" id="gif_img" src="https://res.cloudinary.com/demo/image/fetch/e_pixelate:10/https://res.cloudinary.com/gifcloud4pixelation/image/upload/v1648203877/inf_war_wtqoci.gif">
+    <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input id="typePlaceToDisable" type="text" placeholder="Type in your guess...">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i id="buttondisable" class="fas fa-search"></i></div>
+      </div>
+    </div>
+    <div class="guesses-div">
+      <img id="1stG" src="img/neutral.png">
+      <img id="2ndG" src="img/neutral.png">
+      <img id="3rdG" src="img/neutral.png">
+      <img id="4thG" src="img/neutral.png">
+      <img id="5thG" src="img/neutral.png">
+    </div>
+    <file>
+    <script src="js/filtered_movies.js"></script>
+    <script src="js/script_original.js"></script>
+
+  </body>
+</html>
