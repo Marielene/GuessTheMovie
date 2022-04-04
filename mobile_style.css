@@ -1,0 +1,39 @@
+/*-----------------------------mobile style sheet----------------------------------------*/
+
+@media screen and (max-width: 800px){
+
+  .popup{
+  width: 100%;
+  height: auto;
+  background-color: #161616;
+  margin: 0px auto;
+  position: absolute;
+  margin-left: 0%;
+
+  }
+
+  .mainImg
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.rankCard {
+    display: inline-block;
+    margin: auto 2%;
+    margin-top: 2%;
+    width: 13%;
+}
+
+#depixelate button {
+    font-size: 55px;
+    width: 340px;
+}
+
+#share_button button{
+      font-size: 55px;
+    width: 340px;
+}
+}

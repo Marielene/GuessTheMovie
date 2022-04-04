@@ -2,32 +2,123 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Guess the film</title>
+    <title>Flixle.io</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile_style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   </head>
-  <body>
-    <img class="mainImg" id="gif_img" src="https://res.cloudinary.com/demo/image/fetch/e_pixelate:10/https://res.cloudinary.com/gifcloud4pixelation/image/upload/v1648203877/inf_war_wtqoci.gif">
-    <div class="wrapper">
-      <div class="search-input">
-        <a href="" target="_blank" hidden></a>
-        <input id="typePlaceToDisable" type="text" placeholder="Type in your guess...">
-        <div class="autocom-box">
-          <!-- here list are inserted from javascript -->
+  <body onload="checkCookie()">
+    <div id="wrapperMain"></div>
+      <div id="header">
+
+        <div id="header_content">
+
+          <div class="header_item" id="head_sect_01"><img id="head_bt_01" src="img/info_icon.png"></div>
+          <div class="header_item" id="head_sect_02"><img id="head_bt_02" src="img/like_icon.png"></div>
+          <div class="header_item" id="head_sect_03"><img src="img/logo_icon.png"></div>
+          <div class="header_item" id="head_sect_04"><img src="img/text_icon.png"></div>
+          <div class="header_item" id="head_sect_05"><img id="head_bt_03" src="img/stats_icon.png"></div>
+          <div class="header_item" id="head_sect_06"><img id="head_bt_04" src="img/about_icon.png"></div>
+
         </div>
-        <div class="icon"><i id="buttondisable" class="fas fa-search"></i></div>
+        <div class="stripe_border"><img src="img/stripe_border.jpg">
+        </div>
+
+<!--pop up sections--------------------------------------------------------------------------->
+        <div class="popup" id="popup_01">
+        <img src="img/logo_icon.png"><img src="img/text_icon.png">
+        <h2 class="popup_title">INFO</h2></br>
+        <p2 class="popUpText">Hey There! Welcome to Flixle.io.</p2><br>
+        <p2 class="popUpText">Its a really simple game. </p2><br>
+        <p2 class="popUpText">Watch the heavily pixelated film clip and guess what the film the clip is from. If you are struggling you can hit the 'DE-PIXELATE' button and clear up the image. Each time you depixelate, your rank will drop. So keep your eyes peeled for that A+ rating.</p2><br>
+        
+        <button class="popUpshut_bt" id="popupShut_01">close</button>
       </div>
+
+      <div class="popup" id="popup_02">
+        <img src="img/logo_icon.png"><img src="img/text_icon.png">
+        <h2 class="popup_title">LIKE US?</h2></br>
+
+        <p2 class="popUpText">Its nice to be nice.</p2><br>
+        <p2 class="popUpText">So we are hoping this game will pay it forward a little.</p2><br>
+        <p2 class="popUpText">We dont want you to 'buy us a coffee' but if you would like to donate a little something, we pick a go fund me to promote every month.
+        This month is Dude at Dude who really needs your help.</p2><br>
+        <a href="https://www.w3schools.com/">Dudes Go Fund Me</a>
+        <br/>
+        <button class="popUpshut_bt" id="popupShut_02">close</button>
+      </div>
+
+      <div class="popup" id="popup_03">
+        <img src="img/logo_icon.png"><img src="img/text_icon.png">
+        <h2 class="popup_title">STATS</h2></br>
+        <p2 class="popUpText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </p2><br/>
+        <button class="popUpshut_bt" id="popupShut_03">close</button>
+      </div>
+
+      <div class="popup" id="popup_04">
+        <img src="img/logo_icon.png"><img src="img/text_icon.png">
+        <h2 class="popup_title">ABOUT</h2></br>
+        <p2 class="popUpText">Flixle was built buy the guys at Echoworks.io</p2><br/>
+        <p2 class="popUpText">If you have a digital project that needs a great team to work on, just pop over to our site and get in touch, we would love to hear from you</p2><br/>
+        <p2 class="popUpText">Many Thanks from the EchoWorks team.</p2><br/>
+        <a href="https://www.w3schools.com/">echoworks.io</a></br>
+
+        <button class="popUpshut_bt" id="popupShut_04">close</button>
+      </div>
+      
+      <!--pop up sections end--------------------------------------------------------------------------->
+
+
+      </div>
+      <img class="mainImg" id="gif_img" src="https://res.cloudinary.com/demo/image/fetch/e_pixelate/https://res.cloudinary.com/gifcloud4pixelation/image/upload/v1648203877/inf_war_wtqoci.gif">
+      <div id="message_box" hidden="true"><p>this is a message that you have completed the game</p></div>
+
+
+        <div id="depixelate">
+          <button onclick = "clearerImg()">DE-PIXELATE</button>
+        </div>
+
+
+
+      <div id="rank_body">
+          <!--<p class="rank_label">RANK</p>-->
+          <img class="rankCard" id="rank_Aplus_card" style="opacity:1;"  src="img/rank_Aplus_card.jpg">
+          <img class="rankCard" id="rank_A_card" style="opacity:0.25;" src="img/rank_A_card.jpg">
+          <img class="rankCard" id="rank_B_card" style="opacity:0.25;" src="img/rank_B_card.jpg">
+          <img class="rankCard" id="rank_C_card" style="opacity:0.25;" src="img/rank_C_card.jpg">
+          <img class="rankCard" id="rank_D" style="opacity:0.25;" src="img/rank_D_card.jpg">
+      </div>
+
+
+    <div id="guess_section">
+      <div id="guess_body">
+       
+        <div class="search-input">
+          <div id="guessInput">
+            <a href="" target="_blank" hidden></a>
+            <input id="typePlaceToDisable" type="text" placeholder="Type in your guess...">
+            <div class="autocom-box">
+              <!-- here list are inserted from javascript -->
+            </div>
+          
+        </div>
+
+      </div>
+      <button id="gobutton" onclick="guessButtonFunc()" class="go_button" >GO</button>
     </div>
-    <div class="guesses-div">
-      <img id="1stG" src="img/neutral.png">
-      <img id="2ndG" src="img/neutral.png">
-      <img id="3rdG" src="img/neutral.png">
-      <img id="4thG" src="img/neutral.png">
-      <img id="5thG" src="img/neutral.png">
+  </div>
+
+      <div id="share_button">
+        <button onclick = "resultCopy()">SHARE RESULT</button>
+      </div>
+      
     </div>
+  </div>
     <file>
-    <script src="js/filtered_movies.js"></script>
+    <script src="js/filtered_movies10k.js"></script>
+    <script src="js/queued_movs.js"></script>
     <script src="js/script_original.js"></script>
 
   </body>

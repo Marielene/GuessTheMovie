@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'VT323', monospace;
+}
+
+body{
+  background-color: #0c0c0c;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-family: 'VT323', monospace;
+}
+/* Residual search bar contents*/
+::selection{
+  color: #1a5668;
+  background: #161616;
+}
+
+/*.wrapper{
+  max-width: 450px;
+  margin: 150px auto;
+} */
+/*
+.wrapper .search-input{
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+} */
+
+/*Header & co*/
+p{
+  font-family: 'VT323', monospace;
+
+  color: white;
+}
+
+#wrapperMain{
+
+  height: auto;
+  margin: 0px auto;
+}
+
+
+#header{
+  width: 100%;
+  height: auto;
+  margin: 10px auto 0px auto;
+}
+
+#header_content{
+  width: 100%;
+  max-width: 1000px;
+  height: 60px;
+  margin: 0px auto;
+}
+
+#header_content img{
+vertical-align: middle;
+  max-width: 75%;
+}
+
+#header_content img:hover{
+ opacity:0.5; 
+}
+
+
+
+.header_item{
+  width: 14%;
+  display: inline-block;
+  margin: 0px auto;
+  text-align: center;
+  float: left;
+
+}
+#head_sect_03{
+margin-left: 5%;
+}
+
+#head_sect_04{
+  min-width: 25%;
+  text-align: left;
+  margin-top: 1%;
+}
+
+.stripe_border{
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  border: 0px;
+  background-image: url("img/stripe_border.jpg");
+  background-repeat: repeat-x;
+  clear: both;
+  padding-top: 2%;
+}
+
+/*Search box + suggestions */
+.search-input input{
+  width: 100%;
+  margin:0px 3%;
+  height: 60px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-color: #1a5668;
+  border-width: 5px;
+  background-color: #161616;
+  font-size: 24px;
+  color: white;
+}
+
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box{
+  width: 50%;
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input .go_button{
+  right: 0px;
+  top: 0px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 50%;
+  cursor: default;
+  border-radius: 3px;
+  color: white;
+}
+
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  color: #efab48;
+  background-color:  #1a5668;
+}
+
+#guessInput{
+  width: 90%;
+ margin: 0px auto;
+ max-width: 1000px;
+ height: auto;
+
+}
+
+#guessInput input{
+ width: 40%;
+ margin:0px 3%;
+ height: 60px;
+ margin-bottom: 20px;
+ border-style: solid;
+ border-color: #1a5668;
+ border-width: 5px;
+ background-color: #161616;
+ font-size: 24px;
+ color: white;
+}
+
+.guess_label{
+ font-family: 'VT323', monospace;
+ color: blue;
+ display: inline-block;
+ color: #1a5668;
+ font-size: 85px;
+ margin-left: 8%;
+}
+
+.go_button{
+ font-family: 'VT323', monospace;
+ color: #1a5668;
+ display: inline-block;
+ font-size: 85px;
+ background-color: #161616;
+ border-style: solid;
+ border-color: #1a5668;
+ border-width: 5px;
+ padding: 1px 2px;
+
+}
+
+.go_button:hover{
+ color: #efab48;
+ background-color: #161616;
+}
+
+.mainImg
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#rank_body{
+  width: 90%;
+  margin: 0px auto;
+  max-width: 1000px;
+
+  height: auto
+}
+
+.rank_label{
+  font-family: 'VT323', monospace;
+  color: blue;
+  display: inline-block;
+  color: #1a5668;
+  font-size: 85px;
+    margin-bottom: 0%;
+    margin-left: 8%;
+
+}
+
+.rankCard{
+  display: inline-block;
+margin: auto 3%;
+margin-top: 2%;
+    width: 8%;
+}
+
+/* button details */
+#depixelate{
+  width: 90%;
+   margin: 0px auto;
+   max-width: 1000px;
+   height: auto;
+ 
+ }
+ 
+ 
+ #depixelate button{
+   display: block;
+   margin: 0px auto;
+   font-family: 'VT323', monospace;
+   color: #1a5668;
+   font-size: 85px;
+   background-color: #161616;
+   border-style: solid;
+   border-color: #1a5668;
+   border-width: 5px;
+   padding: 1px 20px;
+ }
+ 
+ #depixelate button:hover{
+   color: #efab48;
+   background-color: #161616;
+ }

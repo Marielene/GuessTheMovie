@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Guess the film</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="template_style.css">
+  </head>
+
+  <body onload="checkCookie()">
+
+
+    <div id="wrapperMain">
+
+      <div id="header">
+
+        <div id="header_content">
+
+          <div class="header_item" id="head_sect_01"><img src="img/info_icon.png"></div>
+          <div class="header_item" id="head_sect_02"><img src="img/like_icon.png"></div>
+          <div class="header_item" id="head_sect_03"><img src="img/logo_icon.png"></div>
+          <div class="header_item" id="head_sect_04"><img src="img/text_icon.png"></div>
+          <div class="header_item" id="head_sect_05"><img src="img/stats_icon.png"></div>
+          <div class="header_item" id="head_sect_06"><img src="img/about_icon.png"></div>
+
+        </div>
+
+      </div>
+
+      <div class="stripe_border"><img src="img/stripe_border.jpg">
+      </div>
+
+      <div id ="video_body">
+        <img class="mainImg" id="gif_img" src="https://res.cloudinary.com/demo/image/fetch/e_pixelate/https://res.cloudinary.com/gifcloud4pixelation/image/upload/v1648203877/inf_war_wtqoci.gif">
+      </div>
+
+      <div id="message_box"><p>this is a message that you have completed the game</p></div>
+
+      <div id="rank_body">
+          <p class="rank_label">RANK</p>
+          <img class="rankCard" id="rank_Aplus_card" src="img/rank_Aplus_card.jpg">
+          <img class="rankCard" id="rank_A_card" src="img/rank_A_card.jpg">
+          <img class="rankCard" id="rank_B_card" src="img/rank_B_card.jpg">
+          <img class="rankCard" id="rank_C_card" src="img/rank_C_card.jpg">
+          <img class="rankCard" id="rank_D" src="img/rank_D_card.jpg">
+      </div>
+
+      <div id="guessInput">
+        <p class="guess_label">GUESS</p><input type="" name="guessBox"><button class="go_button">GO</button>
+      </div>
+
+
+      <div id="depixelate">
+        <button>DE-PIXELATE</button>
+      </div>
+
+    </div>
+
+
+
+
+  </body>
+</html>

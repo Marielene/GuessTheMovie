@@ -1,44 +1,214 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'VT323', monospace;
 }
 
 body{
-  background: #644bff;
-  padding: 0 20px;
+  background-color: #0c0c0c;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-family: 'VT323', monospace;
 }
 
+
+/*-----------generic text styles---------------------------*/
+a{
+  font-family: 'VT323', monospace;
+}
+
+p{
+  font-family: 'VT323', monospace;
+  color: white;
+}
+
+p2{
+  font-family: 'VT323', monospace;
+  color: white;
+}
+
+
+
+/*-------------------- Residual search bar contents-----------------------------*/
 ::selection{
-  color: #fff;
-  background: #664AFF;
+  color: #1a5668;
+  background: #161616;
 }
 
 .wrapper{
-  max-width: 450px;
+  max-width: 1000px;
   margin: 150px auto;
 }
 
 .wrapper .search-input{
-  background: #fff;
   width: 100%;
   border-radius: 5px;
   position: relative;
-  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+/*-------------------------------------Header & co------------------------------*/
+
+
+#wrapperMain{
+
+  height: auto;
+  margin: 0px auto;
+}
+
+
+#header{
+  width: 100%;
+  height: auto;
+  margin: 10px auto 0px auto;
+}
+
+#header_content{
+  width: 100%;
+  max-width: 1000px;
+  height: 60px;
+  margin: 0px auto;
+}
+
+#header_content img{
+vertical-align: middle;
+  max-width: 75%;
+}
+
+#header_content img:hover{
+ opacity:0.5; 
+}
+
+
+
+.header_item{
+  width: 14%;
+  display: inline-block;
+  margin: 0px auto;
+  text-align: center;
+  float: left;
+
+}
+#head_sect_03{
+margin-left: 5%;
+}
+
+#head_sect_04{
+  min-width: 25%;
+  text-align: left;
+  margin-top: 1%;
+}
+
+.stripe_border{
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  border: 0px;
+  background-image: url("img/stripe_border.jpg");
+  background-repeat: repeat-x;
+  clear: both;
+  padding-top: 2%;
+}
+
+/*----------------------------------------Search box + suggestions------------------------------- */
+#guess_section{
+width: 100%;
+height: auto;
+display: inline-block;
+
+}
+
+#guess_body{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+    height: 100%;
+    display: flow-root;
+}
+
+.guess_label{
+ font-family: 'VT323', monospace;
+ display: inline-block;
+ color: #1a5668;
+ font-size: 45px;
+ margin-left: 8%;
+ display: inline-block;
+ float: left;
 }
 
 .search-input input{
-  height: 55px;
-  width: 100%;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  padding: 0 60px 0 20px;
-  font-size: 18px;
-  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+  width: 82%;
+  margin:0px 3%;
+  height: 60px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-color: #1a5668;
+  border-width: 5px;
+  background-color: #161616;
+  font-size: 24px;
+  color: white;
+  display: inline-block;
+  float: left;
 }
+
+.go_button{
+ font-family: 'VT323', monospace;
+ color: #1a5668;
+ display: inline-block;
+ font-size: 50px;
+ background-color: #161616;
+ border-style: solid;
+ border-color: #1a5668;
+ border-width: 5px;
+ padding: 1px 2px;
+
+
+}
+
+#guessInput{
+  width: 90%;
+ margin: 0px auto;
+ max-width: 1000px;
+ height: auto;
+
+}
+
+#guessInput input{
+ width: 82%;
+ margin:0px 3%;
+ height: 60px;
+ margin-bottom: 20px;
+ border-style: solid;
+ border-color: #1a5668;
+ border-width: 5px;
+ background-color: #161616;
+ font-size: 24px;
+ color: white;
+}
+
+
+
+
+
+.go_button:hover{
+ color: #efab48;
+ background-color: #161616;
+}
+
+.mainImg
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
 
 .search-input.active input{
   border-radius: 5px 5px 0 0;
@@ -50,6 +220,21 @@ body{
   pointer-events: none;
   max-height: 280px;
   overflow-y: auto;
+   padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+    float: left;
+    width: 60%;
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+.search-input .go_button{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .search-input.active .autocom-box{
@@ -65,39 +250,154 @@ body{
   width: 100%;
   cursor: default;
   border-radius: 3px;
+  color: white;
 }
 
 .search-input.active .autocom-box li{
   display: block;
 }
 .autocom-box li:hover{
-  background: #efefef;
+  color: #efab48;
+  background-color:  #1a5668;
+}
+/*--------------------------------rank section-------------------------------------*/
+#rank_body{
+      width: 100%;
+    margin: 0px auto 30px auto;
+    max-width: 1000px;
+    height: auto;
+    text-align: center;
 }
 
-.search-input .icon{
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  height: 55px;
-  width: 55px;
-  text-align: center;
-  line-height: 55px;
-  font-size: 20px;
-  color: #644bff;
-  cursor: pointer;
-}
-.mainImg
-{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-.guesses-div{
+.rank_label{
+  font-family: 'VT323', monospace;
+  color: blue;
   display: inline-block;
-  padding:50px 50px;
-  margin-left:auto;
-  margin-right: auto;
-  padding-left:22%;
-  padding-right:22%;
+  color: #1a5668;
+  font-size: 85px;
+    margin-bottom: 0%;
+    margin-left: 8%;
+
 }
+
+.rankCard{
+  display: inline-block;
+  margin: auto 3%;
+  margin-top: 2%;
+  width: 8%;
+}
+
+/*-----------------------------depixelate button section----------------------------------------*/
+#depixelate{
+  width: 100%;
+   margin: 0px auto;
+   max-width: 1000px;
+   height: auto;
+   text-align: center;
+ }
+ 
+ 
+ #depixelate button{
+   display: inline-block;
+   margin: 3% auto;
+   font-family: 'VT323', monospace;
+   color: #1a5668;
+   font-size: 85px;
+   background-color: #161616;
+   border-style: solid;
+   border-color: #1a5668;
+   border-width: 5px;
+   padding: 1px 20px;
+   width: 445px;
+ }
+ 
+ #depixelate button:hover{
+   color: #efab48;
+   background-color: #161616;
+ }
+
+
+/*-----------------------------share button section----------------------------------------*/
+  #share_button{
+  width: 100%;
+   margin: 0px auto;
+   max-width: 1000px;
+   height: auto;
+   text-align: center;
+ }
+
+  #share_button button{
+  display: inline-block;
+   margin: 3% auto;
+   font-family: 'VT323', monospace;
+   color: #1a5668;
+   font-size: 75px;
+   background-color: #161616;
+   border-style: solid;
+   border-color: #1a5668;
+   border-width: 5px;
+   padding: 1px 20px;
+   width: 445px;
+ }
+
+  #share_button button:hover{
+   color: #efab48;
+   background-color: #161616;
+ }
+
+
+/*-------------------------------pop up section--------------------------------------*/
+.popup{
+  width: 60%;
+  height: auto;
+  background-color: #161616;
+  margin: 0px auto;
+  position: absolute;
+  margin-left: 20%;
+  padding: 2%;
+  border-style: solid;
+  border-color: #1a5668;
+  border-width: 5px;
+  display: none;
+}
+
+
+.popUpText{
+  font-size: 28px;
+  color: white;
+}
+
+.popup a{
+  font-size: 28px;
+  color: #1a5668;
+
+}
+
+.popup_title{
+  font-family: 'VT323', monospace;
+  color: blue;
+  display: inline-block;
+  color: #1a5668;
+  font-size: 85px;
+  float: right;
+}
+
+
+.popUpshut_bt{
+  font-family: 'VT323', monospace;
+  color: #1a5668;
+  display: inline-block;
+  font-size: 32px;
+  background-color: #161616;
+  border-style: solid;
+  border-color: #1a5668;
+  border-width: 5px;
+  padding: 0px 8px;
+  margin-top: 2%;
+}
+
+.popUpshut_bt:hover{
+  color: #efab48;
+}
+
+
